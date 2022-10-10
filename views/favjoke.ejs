@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="assets/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+    <button id="logout-btn" class="login-container btn">Log Out</button>
+    
+    <table>
+        <tr>
+            <th>Favorited Jokes</th>
+        </tr>
+        <% jokeCollection.forEach(function(response) { %>
+        <tr>
+            <td id="Favorited Jokes">
+                <%= response.joke %>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+
+    <button type="button" value="Back" id="menuback-btn" class="entry-btn btn" onclick="location.href='/menu'">Go Back to menu</button>
+</body>
+</html>

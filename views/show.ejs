@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>think of project title</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="assets/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+    <button id="logout-btn" class="login-container btn">Log Out</button>
+    
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Rating</th>
+            <th>Happiness Rating Explained</th>
+            <th>One Happy Thing</th>
+        </tr>
+        <% moodEntry.forEach(function(response) { %>
+        <tr>
+            <td id="date">
+                <%= response.date %>
+            </td>
+            <td id="rating-td">
+                <%= response.mood %>
+            </td>
+            <td id="entry1">
+                <%= response.rating %>
+            </td>
+            <td id="entry2">
+                <%= response.happyEntry %>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+
+    <button type="button" value="Back" id="menuback-btn" class="entry-btn btn">Go Back to menu</button>
+</body>
+</html>

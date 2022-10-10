@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mood Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="assets/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+    <div class="menu">
+        <div id="new-account" class="container">
+            <div class="title"><h1>New Account</h1></div>
+            
+            <form action="/register" method="POST" class="account-form">
+                <label for="firstname">First Name</label>
+                <input type="text" placeholder="Enter First Name" name="firstname" id="firstname" required>
+
+                <label for="lastname">Last Name</label>
+                <input type="text" placeholder="Enter Last Name" name="lastname" id="lastname" required>
+
+                <label for="username">Username</label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required>
+                <span id="username-error">
+                    <% if(usernameError.length > 0) { %>
+                    Error: <%= usernameError %>
+                    <% } %>
+                </span>
+
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+                <label for="passwordConf">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" name="passwordConf" id="passwordConf">
+
+                <input type="submit" value="Create Account" class="login-btn btn">
+                <button type="button" value="Back" id="menuback-btn" class="entry-btn btn" onclick="location.href='/login'">Cancel</button>
+            </form>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mood Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="assets/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+
+<body>
+    <button id="logout-btn" class="login-container btn">Log Out</button>
+
+    <div class="menu">
+        <div id="mainmenu" class="container">
+            <div class="title"><h1>Mood Tracker</h1></div>
+
+            <div class="title"><h2>Welcome <%= userFirstName %>!</h2></div>
+            
+            <button id="entry-btn" class="menu-btn btn">Create New Entry</button>
+            <button id="view-btn" class="menu-btn btn">View Previous Entries</button>
+            <button id="joke-btn" class="menu-btn btn">Give me a joke!</button>
+        </div>
+    </div>
+</body>
+</html>

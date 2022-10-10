@@ -1,0 +1,164 @@
+body {
+    background-color: lavenderblush;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.joke-container {
+    height: fit-content;
+    width: 800px;
+    max-width: 80%;
+    background-color: lightpink;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    margin: 5px;
+}
+
+.fav-joke {
+    position: absolute;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#fav-joke-btn {  
+    background-color: lightcoral;
+    margin-top: 60px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#saveButton {
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: lightcoral;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#joke {
+    text-align: center;
+}
+
+.menu {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 80%;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+}
+
+.login-item {
+    display: flex;
+    width: 90%;
+    gap: 8px;
+    margin: 8px auto;
+    padding-right: 5px;
+    align-items: center;
+}
+
+.login-btn {
+    width: 43%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#logout-btn {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.entryItem {
+    margin: 10px;
+    padding-bottom: 30px;
+}
+
+.textBox {
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+#fav {
+    float: right;
+}
+
+.btn {
+    background-color: lightblue;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.menu-btn {
+    padding: 10px;
+    margin: 5px;
+    width: 47%;
+}
+
+.entry-btn {
+    margin: 10px;
+    padding: 10px;
+}
+
+#joke-btn {
+    width: 96.5%
+}
+
+.hide {
+    display: none;
+}
+
+table{
+    border: 1px solid black;
+    margin: 10px;
+}
+
+th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+td {
+    border: 1px dotted black;
+    
+}
+

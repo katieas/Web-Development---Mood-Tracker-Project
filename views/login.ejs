@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mood Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="assets/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="menu">
+        <div id="mainmenu" class="container">
+            <div class="title"><h1>Mood Tracker Login</h1></div>
+            <button id="signin-btn" class="menu-btn btn">Login</button>
+            <button type="button" value="new-account" id="new-account-btn" class="menu-btn btn">Create New Account</button>
+
+            <div id="login-form" class="hide">
+                <form action="/login" method="POST" class="login-form"> 
+                    <div class="login-item">
+                    <label><b>Username: </b></label>
+                    <input type="text" placeholder="Enter Username" name="username" class="field" required>
+                    </div>
+
+                    <div class="login-item">
+                    <label><b>Password:  </b></label>
+                    <input type="password" placeholder="Enter Password" name="password" class="field" required>
+                    </div>
+
+                    <div class="login-btn">
+                    <input type="submit" value="Log in" class="login-btn btn half"></button>
+                    <button type="button" value="Cancel" id="cancel-btn" class="login-btn btn half">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

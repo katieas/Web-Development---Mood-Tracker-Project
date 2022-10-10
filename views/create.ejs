@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mood Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="assets/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+
+<body>
+    <button id="logout-btn" class="login-container btn">Log Out</button>
+
+    <div class="menu">
+        <div id="mainmenu" class="container">
+            <fieldset> 
+                <legend>Create Entry</legend>
+                <form action="/show" method="POST">
+                    <div class="entryItem">
+                        <label for="date">Select Date for Entry:</label>
+                        <input type="date" name="date">
+                    </div>
+
+                    <div id="moodScale" class="entryItem">
+                        <label for="mood">Rate your happiness:</label>
+                        <strong>1</strong>
+                        <input type="radio" name="mood" value="1" id="mood">
+                        <input type="radio" name="mood" value="2">
+                        <input type="radio" name="mood" value="3">
+                        <input type="radio" name="mood" value="4">
+                        <input type="radio" name="mood" value="5">
+                        <input type="radio" name="mood" value="6">
+                        <input type="radio" name="mood" value="7">
+                        <input type="radio" name="mood" value="8">
+                        <input type="radio" name="mood" value="9">
+                        <input type="radio" name="mood" value="10">
+                        <strong>10</strong>
+                    </div>
+
+                    <div class="textBox">
+                        <label for="rating">Go into detail about the rating you gave: </label>
+                        <br>
+                        <textarea name="rating" rows=4 cols=60></textarea>
+                    </div>
+
+                    <div class="textBox">
+                        <label for="happyEntry">Share at least one thing that made you happy: </label>
+                        <br>
+                        <textarea name="happyEntry" rows=4 cols=60 required></textarea>
+                    </div>
+
+                    <input type="submit" value="Add Entry" id="submit-btn" class="entry-btn btn">
+                    <button type="button" value="Back" id="menuback-btn" class="entry-btn btn">Go Back</button>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

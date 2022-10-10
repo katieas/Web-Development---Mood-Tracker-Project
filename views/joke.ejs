@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mood Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="assets/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+
+<body>
+    <button id="logout-btn" class="login-container btn">Log Out</button>
+
+    <div class="menu">
+        <div id="joke-container" class="joke-container">
+            <div id="joke">
+                <% jokeCollection.forEach(function(response) { %>
+                    <%= response.joke %>
+            </div>
+            <div class="fav-joke">
+                <form action="/joke/<%= response._id %>" method="POST">
+                    <label for="favjoke">Favorite?</label>
+                    <input type="checkbox" id="favjoke" name="favjoke" <%= response.favorite ? "checked" : "" %>>
+                    <input type="submit" value="Save" id="saveButton">
+                    <% }) %>
+                </form>
+            </div>
+            <button id="fav-joke-btn">View Favorited Jokes</button>
+        </div>
+
+        <div id="mainmenu" class="container">
+            <div class="title"><h1>Mood Tracker</h1></div>
+
+            <div class="title"><h2>Welcome <%= userFirstName %>!</h2></div>
+            
+            <button id="entry-btn" class="menu-btn btn">Create New Entry</button>
+            <button id="view-btn" class="menu-btn btn">View Previous Entries</button>
+            <button id="joke-btn" class="menu-btn btn">Give me a joke!</button>
+
+            <!-- Create Entry Page --> 
+            <fieldset class="hide"> 
+                <legend>Create Entry</legend>
+                <form action="/show" method="POST">
+                    <div class="entryItem">
+                        <label for="date">Select today's date:</label>
+                        <input type="date" name="date">
+                    </div>
+
+                    <div id="moodScale" class="entryItem">
+                        <label for="mood">Rate your happiness:</label>
+                        <strong>1</strong>
+                        <input type="radio" name="mood" value="1" id="mood">
+                        <input type="radio" name="mood" value="2">
+                        <input type="radio" name="mood" value="3">
+                        <input type="radio" name="mood" value="4">
+                        <input type="radio" name="mood" value="5">
+                        <input type="radio" name="mood" value="6">
+                        <input type="radio" name="mood" value="7">
+                        <input type="radio" name="mood" value="8">
+                        <input type="radio" name="mood" value="9">
+                        <input type="radio" name="mood" value="10">
+                        <strong>10</strong>
+                    </div>
+
+                    <div class="textBox">
+                        <label for="rating">Go into detail about the rating you gave: </label>
+                        <br>
+                        <textarea name="rating" rows=4 cols=60></textarea>
+                    </div>
+
+                    <div class="textBox">
+                        <label for="happyEntry">Share at least one thing that made you happy today: </label>
+                        <br>
+                        <textarea name="happyEntry" rows=4 cols=60 required></textarea>
+                    </div>
+
+                    <input type="submit" value="Add Entry" id="submit-btn" class="entry-btn btn">
+                    <button type="button" value="Back" id="back-btn" class="entry-btn btn">Go Back</button>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>
